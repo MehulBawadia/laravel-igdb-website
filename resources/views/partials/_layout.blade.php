@@ -23,7 +23,9 @@
 <body class="bg-gray-900 tracking-widest text-white antialiased">
     @include('partials._header')
 
-    @yield('content')
+    <main class="py-8">
+        @yield('content')
+    </main>
 
     @include('partials._footer')
 
