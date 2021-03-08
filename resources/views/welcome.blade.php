@@ -304,6 +304,50 @@
                         </div>
                     </div>
                 </div>
+
+                <h2 class="text-indigo-500 uppercase tracking-wide font-bold mt-12">Coming Soon</h2>
+                <div class="comingSoonContainer space-y-10 mt-8">
+                    <div class="game flex">
+                        <a href="#">
+                            <img src="{{ asset('/images/cyberpunk.jpg') }}" alt="Cyberpunk" class="w-16 hover:opacity-75 transition ease-in-out duration-150">
+                        </a>
+
+                        <div class="ml-4">
+                            <a href="#" class="hover:text-indigo-500 focus:text-indigo-500">Cyberpunk 2077</a>
+                            <div class="text-gray-400 text-sm mt-1">Sept 16, 2020</div>
+                        </div>
+                    </div>
+                    <div class="game flex">
+                        <a href="#">
+                            <img src="{{ asset('/images/avengers.jpg') }}" alt="Marvel's Avengers" class="w-16 hover:opacity-75 transition ease-in-out duration-150">
+                        </a>
+
+                        <div class="ml-4">
+                            <a href="#" class="hover:text-indigo-500 focus:text-indigo-500">Marvel's Avengers</a>
+                            <div class="text-gray-400 text-sm mt-1">Sept 3, 2020</div>
+                        </div>
+                    </div>
+                    <div class="game flex">
+                        <a href="#">
+                            <img src="{{ asset('/images/ghost.jpg') }}" alt="Ghost of Tsushima" class="w-16 hover:opacity-75 transition ease-in-out duration-150">
+                        </a>
+
+                        <div class="ml-4">
+                            <a href="#" class="hover:text-indigo-500 focus:text-indigo-500">Ghost of Tsushima</a>
+                            <div class="text-gray-400 text-sm mt-1">July 17, 2020</div>
+                        </div>
+                    </div>
+                    <div class="game flex">
+                        <a href="#">
+                            <img src="{{ asset('/images/tlou2.jpg') }}" alt="The Last of Us Part II" class="w-16 hover:opacity-75 transition ease-in-out duration-150">
+                        </a>
+
+                        <div class="ml-4">
+                            <a href="#" class="hover:text-indigo-500 focus:text-indigo-500">The Last of Us Part II</a>
+                            <div class="text-gray-400 text-sm mt-1">June 19, 2020</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
