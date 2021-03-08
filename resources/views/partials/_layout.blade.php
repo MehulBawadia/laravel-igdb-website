@@ -25,6 +25,8 @@
 
     @yield('content')
 
+    @include('partials._footer')
+
     @yield('pageScripts')
 </body>
 </html>
