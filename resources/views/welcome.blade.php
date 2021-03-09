@@ -192,8 +192,8 @@
             </div>
         </div>
 
-        <div class="flex my-10">
-            <div class="recentlyReviewed w-3/4">
+        <div class="flex flex-col lg:flex-row my-10">
+            <div class="recentlyReviewed w-full lg:w-3/4">
                 <h2 class="text-indigo-500 uppercase tracking-wide font-bold">Recently Reviewed</h2>
 
                 <div class="recentlyReviewedContainer space-y-12 mt-8">
@@ -212,7 +212,7 @@
 
                             <div class="text-gray-400 mt-1">PlayStation 4</div>
 
-                            <p class="text-gray-400 mt-6">
+                            <p class="text-gray-400 mt-6 hidden lg:block">
                                 A spectacular re-imagining of one of the most visionary games ever, Final Fantasy VII Remake rebuilds and expands the legendary RPG for today. The first game in this project will be set in the eclectic city of Midgar and presents a fully standalone gaming experience.
                             </p>
                         </div>
@@ -232,7 +232,7 @@
 
                             <div class="text-gray-400 mt-1">PlayStation 4, PC</div>
 
-                            <p class="text-gray-400 mt-6">
+                            <p class="text-gray-400 mt-6 hidden lg:block">
                                 A spectacular re-imagining of one of the most visionary games ever, Final Fantasy VII Remake rebuilds and expands the legendary RPG for today. The first game in this project will be set in the eclectic city of Midgar and presents a fully standalone gaming experience.
                             </p>
                         </div>
@@ -252,7 +252,7 @@
 
                             <div class="text-gray-400 mt-1">Ninento Switch</div>
 
-                            <p class="text-gray-400 mt-6">
+                            <p class="text-gray-400 mt-6 hidden lg:block">
                                 A spectacular re-imagining of one of the most visionary games ever, Final Fantasy VII Remake rebuilds and expands the legendary RPG for today. The first game in this project will be set in the eclectic city of Midgar and presents a fully standalone gaming experience.
                             </p>
                         </div>
@@ -260,7 +260,7 @@
                 </div>
             </div>
 
-            <div class="mostAnticipated w-1/4 ml-32">
+            <div class="mostAnticipated mt-12 lg:mt-0 lg:w-1/4 lg:ml-32">
                 <h2 class="text-indigo-500 uppercase tracking-wide font-bold">Most Aniticipated</h2>
                 <div class="mostAnticipatedContainer space-y-10 mt-8">
                     <div class="game flex">
