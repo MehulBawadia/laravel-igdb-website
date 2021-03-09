@@ -10,7 +10,7 @@
     <div class="container mx-auto px-4">
         <h2 class="text-indigo-500 uppercase tracking-wide font-bold">Popular Games</h2>
 
-        <div class="popularGames pb-16 text-sm grid grid-cols-6 gap-12 border-b border-gray-800">
+        <div class="popularGames pb-16 text-sm grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 xl:grid-cols-6 gap-12 border-b border-gray-800">
             <div class="game mt-8">
                 <div class="relative inline-block">
                     <a href="#">
