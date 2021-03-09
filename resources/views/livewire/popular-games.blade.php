@@ -21,6 +21,16 @@
             </div>
         </div>
     @empty
-        <div class="spinner"></div>
+        @foreach (range(1, 12) as $game)
+            <div class="game mt-8">
+                <div class="relative inline-block">
+                    <div class="bg-gray-800 w-44 h-56"></div>
+                </div>
+
+                <div class="block text-lg text-transparent rounded leading-tight mt-4 bg-gray-700">Title goes here</div>
+
+                <div class="text-transparent bg-gray-700 rounded mt-3 inline-block">PS4, PC, XBox One</div>
+            </div>
+        @endforeach
     @endforelse
 </div>
