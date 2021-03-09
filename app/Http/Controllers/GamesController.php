@@ -14,26 +14,6 @@ class GamesController extends Controller
     public function index()
     {
         $current = now()->timestamp;
-        /*$recentlyReviewed = Http::withHeaders(config('services.igdb'))
-                        ->withBody(
-                            "fields cover.url, first_release_date, name, platforms.abbreviation, rating, rating_count, summary;
-                            where platforms = (6, 48, 49, 130) & rating != null & first_release_date < {$current} & rating_count > 5;
-                            sort rating desc;
-                            limit 3;",
-                            "text"
-                        )->post('https://api.igdb.com/v4/games')->json();*/
-
-        $afterFourMonths = now()->addMonths(4)->timestamp;
-        $mostAnticipated = Http::withHeaders(config('services.igdb'))
-                        ->withBody(
-                            "fields cover.url, first_release_date, name, platforms.abbreviation, total_rating;
-                            where platforms = (6, 48, 49, 130) &
-                            first_release_date <= {$afterFourMonths} & first_release_date > {$current};
-                            sort total_rating asc;
-                            limit 4;",
-                            "text"
-                        )->post('https://api.igdb.com/v4/games')->json();
-
         $comingSoonGames = Http::withHeaders(config('services.igdb'))
                         ->withBody(
                             "fields cover.url, first_release_date, name, total_rating, rating;
@@ -44,6 +24,6 @@ class GamesController extends Controller
                             "text"
                         )->post('https://api.igdb.com/v4/games')->json();
 
-        return view('welcome', compact('mostAnticipated', 'comingSoonGames'));
+        return view('welcome', compact('comingSoonGames'));
     }
 }
