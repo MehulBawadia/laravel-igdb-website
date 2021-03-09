@@ -1,15 +1,15 @@
 <header class="border-b border-gray-800">
-    <nav class="container mx-auto flex items-center justify-between px-4 py-6">
-        <div class="flex items-center">
+    <nav class="container mx-auto flex flex-col lg:flex-row items-center justify-between px-4 py-6">
+        <div class="flex flex-col lg:flex-row items-center">
             <a href="{{ url('/') }}" class="flex-none uppercase text-indigo-300 font-bold text-3xl outline-none hover:text-indigo-500 focus:text-indigo-500" title="Go to {{ config('app.name') }} home page">{{ config('app.name') }}</a>
 
-            <ul class="flex items-center ml-16 space-x-8">
+            <ul class="flex items-center lg:ml-16 space-x-8 mt-6 lg:mt-0">
                 <li><a href="#" class="outline-none hover:text-indigo-500 focus:text-indigo-500">Games</a></li>
                 <li><a href="#" class="outline-none hover:text-indigo-500 focus:text-indigo-500">Reviews</a></li>
                 <li><a href="#" class="outline-none hover:text-indigo-500 focus:text-indigo-500">Coming Soon</a></li>
             </ul>
         </div>
-        <div class="flex items-center">
+        <div class="flex items-center mt-6 lg:mt-0">
             <div class="relative">
                 <input type="text" class="bg-gray-800 text-small rounded-full w-64 pl-8 py-1 outline-none focus:border-indigo-500 focus:ring" placeholder="Search Games..." />
 
