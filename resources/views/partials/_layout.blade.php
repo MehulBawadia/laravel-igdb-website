@@ -12,6 +12,8 @@
 
     <link rel="stylesheet" href="{{ asset('/css/app.css') }}" />
 
+    <livewire:styles>
+
     <style>
         body {
             font-family: 'Nunito', sans-serif;
@@ -28,6 +30,8 @@
     </main>
 
     @include('partials._footer')
+
+    <livewire:scripts>
 
     @yield('pageScripts')
 </body>
