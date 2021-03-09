@@ -25,6 +25,6 @@
             </div>
         </div>
     @empty
-        <div>Loading...</div>
+        <div class="spinner"></div>
     @endforelse
 </div>
