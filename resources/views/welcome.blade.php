@@ -25,20 +25,7 @@
                 <livewire:most-anticipated-games>
 
                 <h2 class="text-indigo-500 uppercase tracking-wide font-bold mt-12">Coming Soon</h2>
-                <div class="comingSoonContainer space-y-10 mt-8">
-                    @foreach ($comingSoonGames as $awaitingGame)
-                        <div class="game flex">
-                            <a href="#">
-                                <img src="{{ Str::replaceFirst('thumb', 'cover_small', $awaitingGame['cover']['url']) }}" alt="{{ $awaitingGame['name'] }}" class="w-16 hover:opacity-75 transition ease-in-out duration-150">
-                            </a>
-
-                            <div class="ml-4">
-                                <a href="#" class="hover:text-indigo-500 focus:text-indigo-500">{{ $awaitingGame['name'] }}</a>
-                                <div class="text-gray-400 text-sm mt-1">{{ \Carbon\Carbon::parse($awaitingGame['first_release_date'])->format('M d, Y') }}</div>
-                            </div>
-                        </div>
-                    @endforeach
-                </div>
+                <livewire:coming-soon-games>
             </div>
         </div>
     </div>
