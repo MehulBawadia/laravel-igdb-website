@@ -8,13 +8,13 @@
 
 @section('content')
     <div class="container mx-auto px-4">
-        <div class="gameDetails border-b border-gray-800 pb-12 flex">
+        <div class="gameDetails border-b border-gray-800 pb-12 flex flex-col lg:flex-row">
             <div class="flex-none">
                 <img src="{{ asset('/images/ff7.jpg') }}" alt="Final Fantasy 7 Remake" title="Final Fantasy 7 Remake">
             </div>
 
-            <div class="ml-12 mr-64">
-                <h1 class="text-gray-200 uppercase tracking-wide font-bold text-4xl">Final Fantasy 7 Remake</h1>
+            <div class="lg:ml-12 lg:mr-64">
+                <h1 class="text-gray-200 uppercase tracking-wide font-bold text-4xl leading-tight mt-1">Final Fantasy 7 Remake</h1>
 
                 <div class="text-gray-400 mt-3">
                     <span>Adventure, RPG</span> &middot;
@@ -29,13 +29,13 @@
                         </div>
                         <div class="ml-4 text-xs">Member <br /> Score</div>
                     </div>
-                    <div class="flex items-center ml-12">
+                    <div class="flex items-center ml-12 mr-12 sm:mr-0">
                         <div class="w-16 h-16 bg-gray-800 rounded-full">
                             <div class="h-full flex justify-center items-center font-bold text-xs">92%</div>
                         </div>
                         <div class="ml-4 text-xs">Critic <br /> Score</div>
                     </div>
-                    <div class="flex items-center ml-12 space-x-4">
+                    <div class="flex items-center mt-4 sm:mt-0 sm:ml-12 space-x-4">
                         <div class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full">
                             <a href="#" class="hover:text-indigo-500 focus:text-indigo-500">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 hover:text-indigo-500 focus:text-indigo-500" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
@@ -75,7 +75,7 @@
         <div class="imagesContainer border-b border-gray-800 pb-12 mt-8">
             <h2 class="text-indigo-500 uppercase tracking-wide font-bold">Images</h2>
 
-            <div class="grid grid-cols-3 gap-12 mt-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mt-8">
                 <div>
                     <a href="#">
                         <img src="{{ asset('/images/screenshot1.jpg') }}" alt="Screenshot 1" class="transition ease-in-out duration-150 hover:opacity-75" />
