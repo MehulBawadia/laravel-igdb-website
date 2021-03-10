@@ -18,7 +18,7 @@ class MostAnticipatedGames extends Component
 
             return Http::withHeaders(config('services.igdb'))
                     ->withBody(
-                        "fields cover.url, first_release_date, name, platforms.abbreviation, total_rating;
+                        "fields cover.url, first_release_date, name, platforms.abbreviation, total_rating, slug;
                         where platforms = (6, 48, 49, 130) &
                         first_release_date <= {$afterFourMonths} & first_release_date > {$current};
                         sort total_rating asc;

@@ -17,7 +17,7 @@ class ComingSoonGames extends Component
 
             return Http::withHeaders(config('services.igdb'))
                     ->withBody(
-                        "fields cover.url, first_release_date, name, total_rating, rating;
+                        "fields cover.url, first_release_date, name, total_rating, rating, slug;
                         where platforms = (6, 48, 49, 130) &
                         first_release_date > {$current};
                         sort first_release_date asc;

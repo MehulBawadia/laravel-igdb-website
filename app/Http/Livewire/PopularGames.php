@@ -18,7 +18,7 @@ class PopularGames extends Component
 
             return Http::withHeaders(config('services.igdb'))
                     ->withBody(
-                        "fields cover.url, first_release_date, name, platforms.abbreviation, rating;
+                        "fields cover.url, first_release_date, name, platforms.abbreviation, rating, slug;
                         where platforms = (6, 48, 49, 130) &
                         (first_release_date >= {$before} & first_release_date < {$after}) &
                         rating != null;
