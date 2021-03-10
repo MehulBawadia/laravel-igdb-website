@@ -2,12 +2,12 @@
     @forelse ($comingSoonGames as $awaitingGame)
         <div class="game flex">
             <a href="{{ route('games.show', $awaitingGame['slug']) }}">
-                <img src="{{ Str::replaceFirst('thumb', 'cover_small', $awaitingGame['cover']['url']) }}" alt="{{ $awaitingGame['name'] }}" class="w-16 hover:opacity-75 transition ease-in-out duration-150">
+                <img src="{{ $awaitingGame['coverImageUrl'] }}" alt="{{ $awaitingGame['name'] }}" class="w-16 hover:opacity-75 transition ease-in-out duration-150">
             </a>
 
             <div class="ml-4">
                 <a href="{{ route('games.show', $awaitingGame['slug']) }}" class="hover:text-indigo-500 focus:text-indigo-500">{{ $awaitingGame['name'] }}</a>
-                <div class="text-gray-400 text-sm mt-1">{{ \Carbon\Carbon::parse($awaitingGame['first_release_date'])->format('M d, Y') }}</div>
+                <div class="text-gray-400 text-sm mt-1">{{ $awaitingGame['release_date'] }}</div>
             </div>
         </div>
     @empty
