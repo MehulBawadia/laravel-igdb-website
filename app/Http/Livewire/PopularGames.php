@@ -30,6 +30,15 @@ class PopularGames extends Component
         });
 
         $this->popularGames = $this->formatForView($popularGames);
+
+        collect($this->popularGames)->filter(function ($game) {
+            return $game['rating'];
+        })->each(function ($game) {
+            $this->emit('popularGamesLoaded', [
+                'slug' => $game['slug'],
+                'rating' => $game['rating'] / 100,
+            ]);
+        });
     }
 
     public function render()

@@ -5,8 +5,7 @@
                 <a href="{{ route('games.show', $recentlyGame['slug']) }}">
                     <img src="{{ $recentlyGame['coverImageUrl'] }}" alt="{{ $recentlyGame['name'] }}" class="w-64 md:w-48 hover:opacity-75 transition ease-in-out duration-150">
                 </a>
-                <div class="absolute bottom-0 right-0 w-16 h-16 bg-gray-900 rounded-full" style="bottom: -1.4rem; right: -1.4rem;">
-                    <div class="h-full flex items-center justify-center font-bold text-xs">{{ $recentlyGame['rating'] }}</div>
+                <div id="review_{{ $recentlyGame['slug'] }}" class="absolute bottom-0 right-0 w-16 h-16 bg-gray-900 rounded-full text-sm" style="bottom: -1.4rem; right: -1.4rem;">
                 </div>
             </div>
 
@@ -39,3 +38,9 @@
         @endforeach
     @endforelse
 </div>
+
+@push('scripts')
+    @include('partials._rating', [
+        'event' => 'recentlyReviewedGamesLoaded',
+    ])
+@endpush
