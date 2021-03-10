@@ -3,8 +3,14 @@
         <a href="{{ route('games.show', $game['slug']) }}">
             <img src="{{ $game['coverImageUrl'] }}" alt="{{ $game['name'] }}" class="hover:opacity-75 transition ease-in-out duration-150">
         </a>
-        <div class="absolute bottom-0 right-0 w-16 h-16 bg-gray-800 rounded-full" style="bottom: -1.4rem; right: -1.4rem;">
-            <div class="h-full flex items-center justify-center font-bold text-xs">{{ $game['rating'] }}</div>
+        <div id="{{ $game['slug'] }}" class="absolute bottom-0 right-0 w-16 h-16 bg-gray-800 rounded-full" style="bottom: -1.4rem; right: -1.4rem;">
+            @push('scripts')
+                @include('partials._rating', [
+                    'slug' => $game['slug'],
+                    'rating' => $game['rating'],
+                    'event' => null,
+                ])
+            @endpush
         </div>
     </div>
 
